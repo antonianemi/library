@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return 'Hello Library App!';
-});
+/* @var \Illuminate\Routing\Router $router */
+$router->get('/', 'StatusController@index');
+
+/*
+|--------------------------------------------------------------------------
+| Books Resource
+|--------------------------------------------------------------------------
+*/
+
+$router->get('/books', 'BookController@index');
+$router->get('/books/create', 'BookController@create');
+$router->post('/books', 'BookController@store');
+$router->get('/books/{id}', 'BookController@show');
+$router->get('/books/{id}/edit', 'BookController@edit');
+$router->put('/books/{id}', 'BookController@update');
+$router->delete('/books/{id}', 'BookController@delete');
