@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return 'Hello Library App!';
-});
+/* @var \Illuminate\Routing\Router $router */
+$router->get('/', 'StatusController@index');
