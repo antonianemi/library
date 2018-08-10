@@ -26,4 +26,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the addresses for the users.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param $address
+     */
+    public function addAddress($address)
+    {
+        $this->addresses()->create($address);
+    }
 }
