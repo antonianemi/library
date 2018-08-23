@@ -15,4 +15,12 @@ class UserTest extends TestCase
 
         $this->assertInstanceOf(HasMany::class, $user->addresses());
     }
+
+    /** @test **/
+    public function user_has_many_phones()
+    {
+        $user = factory(User::class)->create();
+
+        $this->assertInstanceOf(HasMany::class, $user->phones());
+    }
 }
