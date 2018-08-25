@@ -46,4 +46,14 @@ class User extends Authenticatable
     {
         $this->addresses()->create($address);
     }
+
+    /**
+     * Get the phones for the users.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function phones()
+    {
+        return $this->hasMany(Phone::class);
+    }
 }
