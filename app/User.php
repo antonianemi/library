@@ -56,4 +56,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Phone::class);
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param $phone
+     */
+    public function addPhones($phone)
+    {
+        $this->phones()->create($phone);
+    }
 }

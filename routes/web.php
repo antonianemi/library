@@ -22,6 +22,7 @@ $router->get('/', 'StatusController@index');
 
 $router->get('/users/{id}', 'UserController@show');
 $router->post('/users/{user}/addresses', 'AddressController@store');
+$router->post('/users/{user}/phones', 'PhonesController@store');
 
 /*
 |--------------------------------------------------------------------------
