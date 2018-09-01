@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 
-class AddressController extends Controller
+class AddressesController extends Controller
 {
     /**
      * Store a newly created resource in storage.
