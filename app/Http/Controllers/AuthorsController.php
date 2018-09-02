@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Author;
 use App\Http\Requests\AuthorRequest;
 
-class AuthorController extends Controller
+class AuthorsController extends Controller
 {
     /**
      * index, get list authors

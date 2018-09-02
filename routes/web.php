@@ -44,13 +44,13 @@ $router->delete('/books/{id}', 'BookController@delete');
 |--------------------------------------------------------------------------
 */
 
-$router->get('/authors', 'AuthorController@index');
-$router->get('/authors/create', 'AuthorController@create');
-$router->post('/authors', 'AuthorController@store');
-$router->get('/authors/{id}', 'AuthorController@show');
-$router->get('/authors/{id}/edit', 'AuthorController@edit');
-$router->put('/authors/{id}', 'AuthorController@update');
-$router->delete('/authors/{id}', 'AuthorController@delete');
+$router->get('/authors', 'AuthorsController@index');
+$router->get('/authors/create', 'AuthorsController@create');
+$router->post('/authors', 'AuthorsController@store');
+$router->get('/authors/{id}', 'AuthorsController@show');
+$router->get('/authors/{id}/edit', 'AuthorsController@edit');
+$router->put('/authors/{id}', 'AuthorsController@update');
+$router->delete('/authors/{id}', 'AuthorsController@delete');
 
 /*
 |--------------------------------------------------------------------------
