@@ -5,9 +5,12 @@ namespace Test\Unit\UserTest;
 use App\User;
 use Tests\TestCase;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class UserTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /** @test **/
     public function user_has_many_address()
     {
