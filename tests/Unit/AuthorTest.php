@@ -5,10 +5,13 @@ namespace Test\Unit\AuthorTest;
 use App\Book;
 use App\Author;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class AuthorTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /** @test **/
     public function author_wrote_one_or_many_books()
     {

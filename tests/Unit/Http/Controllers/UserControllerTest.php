@@ -4,9 +4,12 @@ namespace Tests\Unit\Http\Controllers\UserControllerTest;
 
 use App\User;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class UserControllerTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /** @test **/
     public function user_can_visualize_his_information()
     {
