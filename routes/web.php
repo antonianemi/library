@@ -58,14 +58,6 @@ $router->delete('/authors/{id}', 'AuthorsController@delete');
 |--------------------------------------------------------------------------
 */
 
-$router->get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-$router->post('/login', 'Auth\LoginController@login');
-$router->post('/logout', 'Auth\LoginController@logout')->name('logout');
-$router->post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-$router->get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-$router->post('/password/reset', 'Auth\ResetPasswordController@reset');
-$router->get('/password/reset/{token}', 'Auth\ForgotPasswordController@showResetForm')->name('password.reset');
-$router->get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-$router->post('/register', 'Auth\RegisterController@register');
+Auth::routes();
 
 $router->get('/home', 'HomeController@index')->name('home');
