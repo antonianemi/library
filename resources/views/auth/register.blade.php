@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
-
+                        
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nombre</label>
 
@@ -20,48 +20,6 @@
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="middle_name" class="col-md-4 col-form-label text-md-right">Segundo Nombre</label>
-
-                            <div class="col-md-6">
-                                <input id="middle_name" type="text" class="form-control{{ $errors->has('middle_name') ? ' is-invalid' : '' }}" name="middle_name" value="{{ old('middle_name') }}">
-
-                                @if ($errors->has('middle_name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('middle_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="last_name" class="col-md-4 col-form-label text-md-right">Apellido Paterno</label>
-
-                            <div class="col-md-6">
-                                <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required>
-
-                                @if ($errors->has('last_name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('last_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="mothers_last_name" class="col-md-4 col-form-label text-md-right">Apellido Materno</label>
-
-                            <div class="col-md-6">
-                                <input id="mothers_last_name" type="text" class="form-control{{ $errors->has('mothers_last_name') ? ' is-invalid' : '' }}" name="mothers_last_name" value="{{ old('mothers_last_name') }}" required>
-
-                                @if ($errors->has('mothers_last_name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('mothers_last_name') }}</strong>
                                     </span>
                                 @endif
                             </div>
