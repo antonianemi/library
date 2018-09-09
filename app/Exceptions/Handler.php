@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -31,6 +32,7 @@ class Handler extends ExceptionHandler
      *
      * @param  \Exception  $exception
      * @return void
+     * @throws Exception
      */
     public function report(Exception $exception)
     {
@@ -43,9 +45,20 @@ class Handler extends ExceptionHandler
      * @param  \Illuminate\Http\Request  $request
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
+     * @throws Exception
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof AuthenticationException) {
+            return $this->unauthenticated($request, $exception);
+        }
+        
+        if ($exception instanceof ValidationException) {
+            return $this->convertValidationExceptionToResponse($exception, $request);
+        }
+
+        if(app()->environment() === 'testing') throw $exception;
+
         return parent::render($request, $exception);
     }
 }
