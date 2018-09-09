@@ -124,15 +124,11 @@ class AuthorControllerTest extends TestCase
     /** @test **/
     public function the_user_does_not_send_the_name_of_the_author()
     {
-        $author = new Author([
+        $response = $this->post('/authors', [
             'name' => null,
         ]);
 
-        $this->post('/authors', [
-            $author,
-        ]);
-
-        $this->assertEquals('The name field is required.', session()->get('errors')->toArray()['name'][0]);
+        $response->assertSessionHasErrors(['name']);
     }
 
     /** @test **/

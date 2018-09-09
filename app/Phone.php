@@ -26,4 +26,11 @@ class Phone extends Model
      * @var string
      */
     protected $keyType = 'string';
+
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = [];
 }
