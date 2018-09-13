@@ -7,7 +7,7 @@ use App\Phone;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class AddPhoneToUserTest extends TestCase
+class AddPhonesToUserTest extends TestCase
 {
     use DatabaseMigrations;
 

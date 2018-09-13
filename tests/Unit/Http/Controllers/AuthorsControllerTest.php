@@ -6,7 +6,7 @@ use App\Author;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class AuthorControllerTest extends TestCase
+class AuthorsControllerTest extends TestCase
 {
     use RefreshDatabase;
 
