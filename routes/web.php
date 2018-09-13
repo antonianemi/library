@@ -30,13 +30,13 @@ $router->post('/users/{user}/phones', 'PhonesController@store');
 |--------------------------------------------------------------------------
 */
 
-$router->get('/books', 'BookController@index');
-$router->get('/books/create', 'BookController@create');
-$router->post('/books', 'BookController@store');
-$router->get('/books/{id}', 'BookController@show');
-$router->get('/books/{id}/edit', 'BookController@edit');
-$router->put('/books/{id}', 'BookController@update');
-$router->delete('/books/{id}', 'BookController@delete');
+$router->get('/books', 'BooksController@index');
+$router->get('/books/create', 'BooksController@create');
+$router->post('/books', 'BooksController@store');
+$router->get('/books/{id}', 'BooksController@show');
+$router->get('/books/{id}/edit', 'BooksController@edit');
+$router->put('/books/{id}', 'BooksController@update');
+$router->delete('/books/{id}', 'BooksController@delete');
 
 /*
 |--------------------------------------------------------------------------

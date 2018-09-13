@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Http\Requests\BookRequest;
 
-class BookController extends Controller
+class BooksController extends Controller
 {
     /**
      * Display a listing of the resource.
