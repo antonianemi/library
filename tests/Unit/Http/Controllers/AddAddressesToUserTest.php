@@ -7,7 +7,7 @@ use App\Address;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class AddAddressToUserTest extends TestCase
+class AddAddressesToUserTest extends TestCase
 {
     use DatabaseMigrations;
 
