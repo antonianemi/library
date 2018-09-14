@@ -12,7 +12,7 @@
 */
 
 /* @var \Illuminate\Routing\Router $router */
-$router->get('/', 'StatusController@index');
+$router->get('/', 'WelcomeController@index');
 
 /*
 |--------------------------------------------------------------------------
