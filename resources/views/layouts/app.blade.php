@@ -26,7 +26,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <header id="header" class="group">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,10 +75,17 @@
                 </div>
             </div>
         </nav>
+    </header>
+    <div class="showcase">
 
+    </div>
+    <div id="main" class="group">
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
+    <div id="footer">
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
