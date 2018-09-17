@@ -20,7 +20,7 @@ $router->get('/', 'WelcomeController@index');
 |--------------------------------------------------------------------------
 */
 
-$router->get('/users/{id}', 'UserController@show');
+$router->get('/users/{id}', 'UsersController@show');
 $router->post('/users/{user}/addresses', 'AddressesController@store');
 $router->post('/users/{user}/phones', 'PhonesController@store');
 
