@@ -6,7 +6,7 @@ use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class UserControllerTest extends TestCase
+class UsersControllerTest extends TestCase
 {
     use DatabaseMigrations;
 
