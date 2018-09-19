@@ -10,9 +10,6 @@
 
     <title>{{ config('app.name', 'library') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
@@ -24,6 +21,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
     <header id="header" class="group">
