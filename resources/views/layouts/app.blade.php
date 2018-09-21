@@ -28,9 +28,8 @@
 <body>
     @include('layouts.nav')
 
-    <div class="showcase">
+    @include('layouts.showcase')
 
-    </div>
     <main id="main" class="py-4">
         @yield('content')
         <aside id="sidebar">
