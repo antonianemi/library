@@ -36,9 +36,8 @@
         <aside id="sidebar">
 
         </aside>
-        <footer id="footer">
 
-        </footer>
+        @include('layouts.footer')
     </main>
 
     <!-- Optional JavaScript -->
