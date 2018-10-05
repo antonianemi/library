@@ -10,9 +10,6 @@
 
     <title>{{ config('app.name', 'library') }}</title>
 
-    <!-- Material Design for Bootstrap fonts and icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
